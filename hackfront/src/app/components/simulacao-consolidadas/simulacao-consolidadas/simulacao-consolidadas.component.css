@@ -1,0 +1,122 @@
+.consolidados-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #777;
+}
+
+h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 2rem;
+}
+
+.input-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+input[type="date"] {
+    width: 90%;
+    padding: 0.75rem;
+    background-color: #383838;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.primary-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: #0056b3;
+}
+
+.secondary-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #6c757d;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: #545b62;
+}
+
+.sem-dados {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #ccc;
+  padding: 1rem;
+  background-color: #2c2c2c;
+  border-radius: 6px;
+}
+
+
+/* Media query para tornar o layout responsivo */
+@media (max-width: 600px) {
+  .input-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,33 @@
+<div class="consolidados-container">
+  <button class="back-button" (click)="voltarParaDashboard()">
+    &larr; Voltar
+  </button>
+
+  <h2>Simulações Consolidadas</h2>
+
+  <div class="input-actions">
+    <div class="form-group">
+      <label for="dataInput">Data (DD/MM/AAAA):</label>
+      <input 
+        id="dataInput" 
+        type="date" 
+        [(ngModel)]="dataFiltro"
+      >
+    </div>
+    <div class="button-group">
+      <button class="primary-button" (click)="buscarDados()">Buscar</button>
+      <button class="secondary-button" (click)="limparCampo()">Limpar</button>
+    </div>
+  </div>
+
+  <!-- Tabela só aparece se houver dados -->
+  <app-simulacao-consolidados-tabela 
+    *ngIf="exibirTabela && dadosTabela"
+    [dadosConsolidados]="dadosTabela">
+  </app-simulacao-consolidados-tabela>
+
+  <!-- Mensagem aparece só depois da busca e se não houver dados -->
+  <div *ngIf="buscaRealizada && !exibirTabela" class="sem-dados">
+    <p>Nenhuma simulação encontrada para a data selecionada.</p>
+  </div>
+</div>

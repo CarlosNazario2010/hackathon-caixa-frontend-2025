@@ -1,0 +1,30 @@
+<div class="tabelas-consolidadas-container" *ngIf="produtosConsolidados.length > 0">
+  
+  <div class="tabelas-consolidadas-grid">
+    <div class="produto-card" *ngFor="let produto of produtosConsolidados">
+      
+      <div class="produto-header">
+        <span class="produto-info">Cód: {{ produto.sac.codigo }}</span>
+        <span class="produto-info">Desc: {{ produto.sac.descricao }}</span>
+      </div>
+
+      <div class="produto-conteudo">
+        <div class="detalhes sac">
+          <h4>Dados SAC</h4>
+          <p><span>Taxa Média de Juros:</span> <strong>{{ produto.sac.taxaMediaDeJuros | percent:'1.2-2' }}</strong></p>
+          <p><span>Valor Médio das Prestações:</span> <strong>{{ produto.sac.valorMedioDasPrestacoes | currency:'BRL' }}</strong></p>
+          <p><span>Valor Total Solicitado:</span> <strong>{{ produto.sac.valorTotalDosValoresSolicitados | currency:'BRL' }}</strong></p>
+          <p><span>Soma Total das Prestações:</span> <strong>{{ produto.sac.somaDeTodasAsPrestacoes | currency:'BRL' }}</strong></p>
+        </div>
+        
+        <div class="detalhes price">
+          <h4>Dados PRICE</h4>
+          <p><span>Taxa Média de Juros:</span> <strong>{{ produto.price.taxaMediaDeJuros | percent:'1.2-2' }}</strong></p>
+          <p><span>Valor Médio das Prestações:</span> <strong>{{ produto.price.valorMedioDasPrestacoes | currency:'BRL' }}</strong></p>
+          <p><span>Valor Total Solicitado:</span> <strong>{{ produto.price.valorTotalDosValoresSolicitados | currency:'BRL' }}</strong></p>
+          <p><span>Soma Total das Prestações:</span> <strong>{{ produto.price.somaDeTodasAsPrestacoes | currency:'BRL' }}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

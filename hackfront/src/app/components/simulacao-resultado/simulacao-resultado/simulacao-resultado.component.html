@@ -1,0 +1,90 @@
+<div class="resultado-container" *ngIf="simulacaoData">
+  <button class="back-button" (click)="voltarParaFormulario()">
+    &larr; Voltar
+  </button>
+
+  <h2>Resultado da Simulação</h2>
+
+  <div class="info-geral">
+    <div class="info-group">
+      <span>Valor Desejado:</span>
+      <strong>{{ simulacaoData.valorDesejado | currency:'BRL' }}</strong>
+    </div>
+    <div class="info-group">
+      <span>Prazo:</span>
+      <strong>{{ simulacaoData.prazo }} meses</strong>
+    </div>
+  </div>
+
+  <div class="info-secundaria">
+    <div class="info-group">
+      <span>ID da Simulação:</span>
+      <strong>{{ simulacaoData.idSimulacao }}</strong>
+    </div>
+    <div class="info-group">
+      <span>Código:</span>
+      <strong>{{ simulacaoData.codigo }}</strong>
+    </div>
+    <div class="info-group">
+      <span>Descrição:</span>
+      <strong>{{ simulacaoData.descricao }}</strong>
+    </div>
+    <div class="info-group">
+      <span>Taxa de Juros:</span>
+      <strong>{{ simulacaoData.taxaJuros | percent:'1.2-4' }}</strong>
+    </div>
+  </div>
+
+  <!-- Tabelas SAC e PRICE -->
+  <div class="tabelas-container">
+    <!-- Tabela SAC -->
+    <div class="tabela-wrapper" *ngIf="simulacaoData.listaSac?.length">
+      <h3>Tabela SAC</h3>
+      <table class="tabela-simulacao">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Juros</th>
+            <th>Amortização</th>
+            <th>Prestação</th>
+            <th>Saldo Devedor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let parcela of simulacaoData.listaSac">
+            <td>{{ parcela.parcela }}</td>
+            <td>{{ parcela.juros | currency:'BRL' }}</td>
+            <td>{{ parcela.amortizacao | currency:'BRL' }}</td>
+            <td>{{ parcela.valorPrestacao | currency:'BRL' }}</td>
+            <td>{{ parcela.saldoDevedor | currency:'BRL' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Tabela PRICE -->
+    <div class="tabela-wrapper" *ngIf="simulacaoData.listaPrice?.length">
+      <h3>Tabela PRICE</h3>
+      <table class="tabela-simulacao">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Juros</th>
+            <th>Amortização</th>
+            <th>Prestação</th>
+            <th>Saldo Devedor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let parcela of simulacaoData.listaPrice">
+            <td>{{ parcela.parcela }}</td>
+            <td>{{ parcela.juros | currency:'BRL' }}</td>
+            <td>{{ parcela.amortizacao | currency:'BRL' }}</td>
+            <td>{{ parcela.valorPrestacao | currency:'BRL' }}</td>
+            <td>{{ parcela.saldoDevedor | currency:'BRL' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

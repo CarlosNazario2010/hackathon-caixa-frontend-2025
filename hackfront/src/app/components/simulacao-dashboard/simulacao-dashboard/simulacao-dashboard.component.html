@@ -1,0 +1,19 @@
+<div class="dashboard-container">
+  <app-simulacao-form></app-simulacao-form>
+    
+  <div class="side-panel">
+    <app-simulacao-busca></app-simulacao-busca>
+      
+    <div class="action-buttons-container">
+      <button class="primary-button" [routerLink]="['/resumo']">
+        Resumo de Simulações
+      </button>
+      <button class="primary-button" [routerLink]="['/consolidados']">
+        Simulações Consolidadas
+      </button>
+      <button class="primary-button" [routerLink]="['/monitoramento']">
+        Monitoramento da API
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #303030 0%, #1a1a1a 100%); /* Degradê escuro */
+  color: #f8f9fa; /* Cor do texto padrão para contraste */
+  min-height: 100vh; /* Garante que o degradê cubra toda a altura da tela */
+}

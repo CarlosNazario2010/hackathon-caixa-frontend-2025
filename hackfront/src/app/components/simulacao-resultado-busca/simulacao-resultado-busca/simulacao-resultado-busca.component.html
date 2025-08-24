@@ -1,0 +1,84 @@
+<div class="resultado-container" *ngIf="simulacaoData">
+  
+  <button class="back-button" (click)="voltarParaBusca()">
+    &larr; Voltar
+  </button>
+  
+  <h2>Resultado da Simulação</h2>
+  
+  <div class="info-secundaria">
+    <div class="info-group">
+      <span>ID da Simulação:</span>
+      <strong>{{ simulacaoData.idSimulacao }}</strong>
+    </div>
+    <div class="info-group">
+      <span>Código do Produto:</span>
+      <strong>{{ simulacaoData.codigoProduto }}</strong>
+    </div>
+    <div class="info-group">
+      <span>Descrição do Produto:</span>
+      <strong>{{ simulacaoData.descricaoProduto }}</strong>
+    </div>
+    <div class="info-group">
+      <span>Taxa de Juros:</span>
+      <strong>{{ simulacaoData.taxaJuros | percent }}</strong>
+    </div>
+  </div>
+
+  <div class="info-geral">
+    <div class="info-group-destaque">
+      <span>Valor Solicitado:</span>
+      <strong>{{ simulacaoData.valorDesejado | currency: 'BRL' }}</strong>
+    </div>
+    <div class="info-group-destaque">
+      <span>Prazo:</span>
+      <strong>{{ simulacaoData.prazo }} meses</strong>
+    </div>
+  </div>
+
+  <div class="tabelas-container">
+    <div class="tabela-wrapper">
+      <h3>Tabela SAC</h3>
+      <table class="tabela-simulacao">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Amortização</th>
+            <th>Juros</th>
+            <th>Prestação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let parcela of listaSac">
+            <td>{{ parcela.numero }}</td>
+            <td>{{ parcela.valorAmortizacao | currency: 'BRL' }}</td>
+            <td>{{ parcela.valorJuros | currency: 'BRL' }}</td>
+            <td>{{ parcela.valorPrestacao | currency: 'BRL' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tabela-wrapper">
+      <h3>Tabela PRICE</h3>
+      <table class="tabela-simulacao">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Amortização</th>
+            <th>Juros</th>
+            <th>Prestação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let parcela of listaPrice">
+            <td>{{ parcela.numero }}</td>
+            <td>{{ parcela.valorAmortizacao | currency: 'BRL' }}</td>
+            <td>{{ parcela.valorJuros | currency: 'BRL' }}</td>
+            <td>{{ parcela.valorPrestacao | currency: 'BRL' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

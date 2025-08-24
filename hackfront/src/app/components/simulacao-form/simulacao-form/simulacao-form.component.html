@@ -1,0 +1,38 @@
+<div class="simulacao-container">
+  <h2>Simulador Financeiro</h2>
+  <div class="form-group">
+    <label for="valorDesejado">Valor Desejado - R$:</label>
+    <input 
+      id="valorDesejado" 
+      type="number" 
+      [(ngModel)]="valorDesejado"
+      placeholder="Ex: 10000"
+    >
+  </div>
+  
+  <div class="form-group">
+    <label for="prazoDesejado">Prazo (meses):</label>
+    <input 
+      id="prazoDesejado" 
+      type="number" 
+      [(ngModel)]="prazoDesejado"
+      placeholder="Ex: 12"
+    >
+  </div>
+
+  <div class="button-container">
+    <button 
+      class="primary-button" 
+      (click)="simular()"
+      [disabled]="!valorDesejado || !prazoDesejado"
+    >
+      Simular
+    </button>
+    <button 
+      class="secondary-button" 
+      (click)="limparCampos()"
+    >
+      Limpar Campos
+    </button>
+  </div>
+</div>

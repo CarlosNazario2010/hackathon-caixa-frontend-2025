@@ -1,0 +1,22 @@
+<div class="busca-container">
+  <h2>Buscar Simulação por ID</h2>
+  <div class="form-group">
+    <label for="simulacaoId">ID da Simulação:</label>
+    <input 
+      id="simulacaoId" 
+      type="text" 
+      [(ngModel)]="simulacaoId"
+      placeholder="Digite o ID da simulação"
+    >
+  </div>
+  
+  <div class="button-container">
+    <button 
+      class="primary-button" 
+      (click)="buscarSimulacao()"
+      [disabled]="!simulacaoId"
+    >
+      Buscar
+    </button>
+  </div>
+</div>

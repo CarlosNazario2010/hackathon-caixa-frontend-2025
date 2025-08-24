@@ -1,0 +1,37 @@
+<div class="resumo-container">
+  
+  <button class="back-button" (click)="voltarParaDashboard()">
+    &larr; Voltar
+  </button>
+
+  <h2>Resumo de Simulações</h2>
+  
+  <div class="tabela-wrapper">
+    <table class="tabela-resumo">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Cód. Produto</th>
+          <th>Descrição</th>
+          <th>Taxa Juros</th>
+          <th class="destaque">Valor Desejado</th>
+          <th class="destaque">Prazo</th>
+          <th>Total SAC</th>
+          <th>Total PRICE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let simulacao of simulacoes">
+          <td>{{ simulacao.idSimulacao }}</td>
+          <td>{{ simulacao.codigoProduto }}</td>
+          <td>{{ simulacao.descricaoProduto }}</td>
+          <td>{{ simulacao.taxaJuros | percent }}</td>
+          <td class="destaque">{{ simulacao.valorDesejado | currency: 'BRL' }}</td>
+          <td class="destaque">{{ simulacao.prazo }} meses</td>
+          <td>{{ simulacao.valorTotalParcelasSAC | currency: 'BRL' }}</td>
+          <td>{{ simulacao.valorTotalParcelasPRICE | currency: 'BRL' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
