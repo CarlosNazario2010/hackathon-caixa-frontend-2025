@@ -8,16 +8,16 @@ A lógica completa de cálculo e os detalhes dos endpoints da API utilizados por
 
 ## Exemplo de Screenshots da Aplicação
 
-![Dashboard](prints_tela/dashboard.png)
+![Dashboard](hackfront\prints_tela\dashboard.png)
 
-![Resultado 1](prints_tela/resultado-simulacao.png)
+![Resultado 1](hackfront\prints_tela\resultado-simulacao.png)
 
-![Resultado 2](prints_tela/resultado-simulacao-2.png)
+![Resultado 2](hackfront\prints_tela\resultado-simulacao-2.png)
 
-![Simulacao por Id](prints_tela/simulacao-id.png)
+![Simulacao por Id](hackfront\prints_tela\simulacao-id.png)
 
-![Resumo](prints_tela/resumo-simulacoes.png)
+![Resumo](hackfront\prints_tela\resumo-simulacoes.png)
 
-![Consolidadas](prints_tela/simulacoes-consolidadas.png)
+![Consolidadas](hackfront\prints_tela\simulacoes-consolidadas.png)
 
-![Monitoramento](prints_tela/monitoramento.png)
+![Monitoramento](hackfront\prints_tela\monitoramento.png)
