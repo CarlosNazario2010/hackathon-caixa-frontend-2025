@@ -25,7 +25,7 @@
           <td>{{ simulacao.idSimulacao }}</td>
           <td>{{ simulacao.codigoProduto }}</td>
           <td>{{ simulacao.descricaoProduto }}</td>
-          <td>{{ simulacao.taxaJuros | percent }}</td>
+          <td>{{ simulacao.taxaJuros | percent:'1.2-2' }}</td>
           <td class="destaque">{{ simulacao.valorDesejado | currency: 'BRL' }}</td>
           <td class="destaque">{{ simulacao.prazo }} meses</td>
           <td>{{ simulacao.valorTotalParcelasSAC | currency: 'BRL' }}</td>
